@@ -27,5 +27,9 @@ def chat():
     response = chatbot_response(user_message)
     return jsonify({"response": response})
 
+@app.route("/")
+def home():
+    return "Chatbot is running"
+
 if __name__ == "__main__":
     app.run()
