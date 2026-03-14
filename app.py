@@ -1,12 +1,12 @@
 from flask import Flask, request, jsonify
 import joblib
 import numpy as np
-from tensorflow.keras.models import load_model
+#from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
 # Load saved components
-model = load_model("Suicidal preventional_model.h5")
+model = joblib.load("Suicidal preventional_model.h5")
 vectorizer = joblib.load("vectorizer.pkl")
 encoder = joblib.load("label_encoder.pkl")
 
