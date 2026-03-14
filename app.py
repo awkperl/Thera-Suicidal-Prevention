@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 app = Flask(__name__)
 
 # Load saved components
-model = load_model("chatbot_model.h5")
+model = load_model("Suicidal preventional_model.h5")
 vectorizer = joblib.load("vectorizer.pkl")
 encoder = joblib.load("label_encoder.pkl")
 
