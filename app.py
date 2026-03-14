@@ -16,6 +16,10 @@ def chatbot_response(user_input):
     label_idx = np.argmax(prediction, axis=1)[0]
     label = encoder.inverse_transform([label_idx])[0]
     return label
+@app.route("/python-version")
+def python_version():
+    import sys
+    return f"Python version: {sys.version}"
 
 @app.route("/chat", methods=["POST"])
 def chat():
